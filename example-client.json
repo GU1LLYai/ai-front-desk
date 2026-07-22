@@ -1,0 +1,11 @@
+{
+  "id": "example-client",
+  "businessName": "Example Hair Studio",
+  "twilioNumber": "whatsapp:+14155238886",
+  "calendarId": "primary",
+  "hoursText": "Mon-Fri 9am-5pm, closed weekends",
+  "servicesText": "Haircut £25, Colour £60, Cut & Colour £75",
+  "faqText": "We accept card and cash. Free parking behind the shop.",
+  "businessHours": [9, 10, 11, 13, 14, 15, 16],
+  "googleTokens": null
+}

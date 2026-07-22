@@ -1,0 +1,14 @@
+{
+  "name": "ai-front-desk-backend",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "twilio": "^5.0.0",
+    "googleapis": "^140.0.0",
+    "dotenv": "^16.4.5"
+  }
+}
