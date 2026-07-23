@@ -5,196 +5,201 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Set up your AI front desk</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap');
 
-  :root {
-    --ink: #16202B;
-    --slate: #2B3846;
-    --parchment: #F2ECDF;
-    --parchment-dim: #E7DFCE;
-    --brass: #B98A4A;
-    --brass-light: #D4AC72;
-  }
+  :root {
+    --ink: #16202B;
+    --slate: #2B3846;
+    --parchment: #F2ECDF;
+    --parchment-dim: #E7DFCE;
+    --brass: #B98A4A;
+    --brass-light: #D4AC72;
+  }
 
-  * { box-sizing: border-box; }
+  * { box-sizing: border-box; }
 
-  body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background: var(--ink);
-    color: var(--parchment);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    padding: 48px 20px;
-  }
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: var(--ink);
+    color: var(--parchment);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 48px 20px;
+  }
 
-  .card {
-    width: 100%;
-    max-width: 520px;
-  }
+  .card {
+    width: 100%;
+    max-width: 520px;
+  }
 
-  .eyebrow {
-    font-size: 11px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--brass-light);
-    margin-bottom: 8px;
-  }
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--brass-light);
+    margin-bottom: 8px;
+  }
 
-  h1 {
-    font-family: 'Fraunces', serif;
-    font-weight: 600;
-    font-size: 28px;
-    margin: 0 0 6px;
-  }
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 28px;
+    margin: 0 0 6px;
+  }
 
-  .sub {
-    color: rgba(242,236,223,0.65);
-    font-size: 14px;
-    margin-bottom: 32px;
-    line-height: 1.5;
-  }
+  .sub {
+    color: rgba(242,236,223,0.65);
+    font-size: 14px;
+    margin-bottom: 32px;
+    line-height: 1.5;
+  }
 
-  form {
-    background: var(--slate);
-    border: 1px solid rgba(185,138,74,0.25);
-    border-radius: 6px;
-    padding: 28px;
-  }
+  form {
+    background: var(--slate);
+    border: 1px solid rgba(185,138,74,0.25);
+    border-radius: 6px;
+    padding: 28px;
+  }
 
-  label {
-    display: block;
-    font-size: 12.5px;
-    color: var(--brass-light);
-    margin-bottom: 6px;
-    margin-top: 20px;
-  }
+  label {
+    display: block;
+    font-size: 12.5px;
+    color: var(--brass-light);
+    margin-bottom: 6px;
+    margin-top: 20px;
+  }
 
-  label:first-of-type { margin-top: 0; }
+  label:first-of-type { margin-top: 0; }
 
-  .hint {
-    display: block;
-    font-size: 11.5px;
-    color: rgba(242,236,223,0.5);
-    margin-top: 4px;
-  }
+  .hint {
+    display: block;
+    font-size: 11.5px;
+    color: rgba(242,236,223,0.5);
+    margin-top: 4px;
+  }
 
-  input, textarea {
-    width: 100%;
-    background: var(--ink);
-    border: 1px solid rgba(242,236,223,0.15);
-    border-radius: 4px;
-    padding: 10px 12px;
-    color: var(--parchment);
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    outline: none;
-  }
+  input, textarea {
+    width: 100%;
+    background: var(--ink);
+    border: 1px solid rgba(242,236,223,0.15);
+    border-radius: 4px;
+    padding: 10px 12px;
+    color: var(--parchment);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    outline: none;
+  }
 
-  input:focus, textarea:focus {
-    border-color: var(--brass);
-  }
+  input:focus, textarea:focus {
+    border-color: var(--brass);
+  }
 
-  textarea { resize: vertical; min-height: 70px; }
+  textarea { resize: vertical; min-height: 70px; }
 
-  .row {
-    display: flex;
-    gap: 12px;
-  }
-  .row > div { flex: 1; }
+  .row {
+    display: flex;
+    gap: 12px;
+  }
+  .row > div { flex: 1; }
 
-  button {
-    margin-top: 28px;
-    width: 100%;
-    background: var(--brass);
-    color: var(--ink);
-    border: none;
-    border-radius: 4px;
-    padding: 13px;
-    font-size: 14.5px;
-    font-weight: 600;
-    cursor: pointer;
-    font-family: 'Inter', sans-serif;
-  }
+  button {
+    margin-top: 28px;
+    width: 100%;
+    background: var(--brass);
+    color: var(--ink);
+    border: none;
+    border-radius: 4px;
+    padding: 13px;
+    font-size: 14.5px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+  }
 
-  button:hover { background: var(--brass-light); }
+  button:hover { background: var(--brass-light); }
 
-  .footnote {
-    text-align: center;
-    font-size: 12px;
-    color: rgba(242,236,223,0.4);
-    margin-top: 18px;
-  }
+  .footnote {
+    text-align: center;
+    font-size: 12px;
+    color: rgba(242,236,223,0.4);
+    margin-top: 18px;
+  }
 </style>
 </head>
 <body>
-  <div class="card">
-    <div class="eyebrow">AI Front Desk — Setup</div>
-    <h1>Tell us about your business</h1>
-    <div class="sub">
-      This is what your AI employee will use to answer customers and book
-      appointments. You can come back and update it anytime.
-    </div>
+  <div class="card">
+    <div class="eyebrow">AI Front Desk — Setup</div>
+    <h1>Tell us about your business</h1>
+    <div class="sub">
+      This is what your AI employee will use to answer customers and book
+      appointments. You can come back and update it anytime.
+    </div>
 
-    <form action="/onboard" method="POST">
-      <label>Business name</label>
-      <input type="text" name="businessName" placeholder="Example Hair Studio" required />
+    <form action="/onboard" method="POST">
+      <label>Business name</label>
+      <input type="text" name="businessName" placeholder="Example Hair Studio" required />
 
-      <div class="eyebrow" style="margin-top:0;">Your number</div>
-      <div class="hint" style="margin-bottom:14px;">
-        We'll set up a phone number for customers to text automatically — no
-        Twilio account needed on your end.
-      </div>
+      <div class="eyebrow" style="margin-top:0;">Your number</div>
+      <div class="hint" style="margin-bottom:14px;">
+        We'll set up a phone number for customers to text automatically — no
+        Twilio account needed on your end.
+      </div>
 
-      <div class="row">
-        <div>
-          <label>Country
-            <span class="hint">2-letter code, e.g. GB or US</span>
-          </label>
-          <input type="text" name="countryCode" placeholder="GB" maxlength="2" />
-        </div>
-        <div>
-          <label>Preferred area code
-            <span class="hint">Optional</span>
-          </label>
-          <input type="text" name="areaCode" placeholder="e.g. 020" />
-        </div>
-      </div>
+      <div class="row">
+        <div>
+          <label>Country
+            <span class="hint">2-letter code, e.g. GB or US</span>
+          </label>
+          <input type="text" name="countryCode" placeholder="GB" maxlength="2" />
+        </div>
+        <div>
+          <label>Preferred area code
+            <span class="hint">Optional</span>
+          </label>
+          <input type="text" name="areaCode" placeholder="e.g. 020" />
+        </div>
+      </div>
 
-      <div class="row" style="margin-top:20px;">
-        <div>
-          <label>Opens
-            <span class="hint">24-hour, e.g. 09:00</span>
-          </label>
-          <input type="text" name="openTime" placeholder="09:00" required />
-        </div>
-        <div>
-          <label>Closes
-            <span class="hint">24-hour, e.g. 17:00</span>
-          </label>
-          <input type="text" name="closeTime" placeholder="17:00" required />
-        </div>
-      </div>
+      <label>Already have a Twilio number?
+        <span class="hint">Optional — enter it to reuse it instead of buying a new one (works on a trial account)</span>
+      </label>
+      <input type="text" name="existingNumber" placeholder="+447712345678" />
 
-      <label>Days open
-        <span class="hint">e.g. Monday to Friday</span>
-      </label>
-      <input type="text" name="daysOpen" placeholder="Monday to Friday" required />
+      <div class="row" style="margin-top:20px;">
+        <div>
+          <label>Opens
+            <span class="hint">24-hour, e.g. 09:00</span>
+          </label>
+          <input type="text" name="openTime" placeholder="09:00" required />
+        </div>
+        <div>
+          <label>Closes
+            <span class="hint">24-hour, e.g. 17:00</span>
+          </label>
+          <input type="text" name="closeTime" placeholder="17:00" required />
+        </div>
+      </div>
 
-      <label>Services & prices
-        <span class="hint">One per line works well</span>
-      </label>
-      <textarea name="servicesText" placeholder="Haircut - £25&#10;Colour - £60&#10;Cut &amp; Colour - £75" required></textarea>
+      <label>Days open
+        <span class="hint">e.g. Monday to Friday</span>
+      </label>
+      <input type="text" name="daysOpen" placeholder="Monday to Friday" required />
 
-      <label>Anything else customers often ask
-        <span class="hint">Parking, payment methods, policies — optional</span>
-      </label>
-      <textarea name="faqText" placeholder="We accept card and cash. Free parking behind the shop."></textarea>
+      <label>Services & prices
+        <span class="hint">One per line works well</span>
+      </label>
+      <textarea name="servicesText" placeholder="Haircut - £25&#10;Colour - £60&#10;Cut &amp; Colour - £75" required></textarea>
 
-      <button type="submit">Continue to connect calendar</button>
-    </form>
-    <div class="footnote">Next step: you'll sign in to connect your Google Calendar.</div>
-  </div>
+      <label>Anything else customers often ask
+        <span class="hint">Parking, payment methods, policies — optional</span>
+      </label>
+      <textarea name="faqText" placeholder="We accept card and cash. Free parking behind the shop."></textarea>
+
+      <button type="submit">Continue to connect calendar</button>
+    </form>
+    <div class="footnote">Next step: you'll sign in to connect your Google Calendar.</div>
+  </div>
 </body>
 </html>
